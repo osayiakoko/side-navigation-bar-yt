@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.container{
+    transition: .5s;
+}
+
+.top-nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 2px #bbb;
+    font-size: 18px;
+    padding: 0 20px;
+    height: 60px;
+    z-index: 10;
+}
+
+.top-nav .logo{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.top-nav li{
+    display: inline-block;
+}
+
+.top-nav a{
+    color: #333;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.top-nav a:hover{
+    color: #4b62c5;
+    transform: scale(1.1);
+}
+
+.top-nav .nav-control{
+    width: 35px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    display: none;
+}
+
+.top-nav .nav-control:hover{
+    color: #4b62c5;
+}
+
+.side-nav{
+    position: fixed;
+    background: #1f295a;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    z-index: 20;
+    overflow-x: hidden;
+    transition: width .5s;
+}
+
+.side-nav a{
+    color: #eee;
+    transition: .5s;
+}
+
+.side-nav a:hover{
+    background-color: #4b62c5;
+}
+
+.side-nav ul{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.side-nav li{
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.page-content{
+    background-color: #f2f6ff;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #777;
+}
+
+@media(max-width: 576px){
+    .top-nav ul{
+        display: none;
+    }
+
+    .nav-control.show{
+        display: block;
+    }
+}
